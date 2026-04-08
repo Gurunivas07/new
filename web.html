@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ready School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script >
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily:{
+                    sans:['Intrer', 'sans-serif'],
+
+                },
+                colors:{
+                    primary: '#f43f5e',
+
+                },
+                backgronundImage:{
+                    'hero-gradient':'linear-gradient(135deg, #f43f5e 0%, #d946ef 100%)',
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        .text-gradient{
+            background: linear-gradient(135deg, #f43f5e 0%, #d946ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-alt{
+            background: linear-gradient(180deg, #fdf2f4 0%, #ffffff 100%);
+        }
+        [x-cloak]{display:none !important;}
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b" x-data="{ open: false }">
+        <div class="container mx-auto flex items-center justify-between h-16 px-4">
+            <a href="#" class="flex items-center gap-2 font-bold text-xl">
+                <span class="text-gradient">AI Ready</span>
+                <span>School</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#AIProducts" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">AI Products</a>
+                <a href="usecases.html" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">UseCases</a>
+                <a href="resources.html" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Resources</a>
+            </div>
+            <div class="hidden md:flex items-center gap-3">
+                <button class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900">Sign in</button>
+                <button class="px-5 py-2 text-sm font-medium bg-primary text-white rounded-md hover:opacity-90 transition-opacity">Schedule a Call</button>
+            </div>
+            <button class="md:hidden p-2 text-slate-600" @click="open = !open">
+                <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+
+        <div x-show="open" x-cloak class="md:hidden border-t bg-white p-4 space-y-3 shadow-lg">
+            <a href="#AIProducts" class="block text-sm font-medium text-slate-500 py-2" @click="open = false">AI Products</a>
+            <a href="usecases.html" class="block text-sm font-medium text-slate-500 py-2" @click="open = false">Use Cases</a>
+            <a href="resources.html" class="block text-sm font-medium text-slate-500 py-2" @click="open = false">Resources</a>
+            <div class="flex flex-col gap-2 pt-2">
+                <button class="w-full px-4 py-2 text-sm font-medium border rounded-md">Sign in</button>
+                <button class="w-full px-4 py-2 text-sm font-medium bg-primary text-white rounded-md">Schedule a Call</button>
+            </div>
+        </div>
+    </nav>
+    <section class="relative overflow-hidden">
+        <div class="container mx-auto px-4 pt-20 pb-8 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 max-w-4xl mx-auto tracking-tight">
+                A Complete AI Ecosystem For K-12 Schools
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+               Everything a school needs to lead the AI era. Personalised AI companions for every student. Intelligent tools that free teachers to teach. Physical AI labs where ideas come alive. And the infrastructure to run it all — securely, on your terms.
+            </p>
+            <button class="inline-flex items-center bg-primary text-white text-lg font-bold px-8 py-4 rounded-full gap-2 hover:shadow-lg transition-all">
+                Schedule a Call
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+        </div>
+        <div class="container mx-auto px-4 pb-16">
+            <div class="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border bg-slate-100">
+                <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69100b9b9323d93e57131bf5_main-back-3-p-2000.png" alt="School Classroom" class="w-full h-auto">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="py-20">
+        <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto">
+                    Every School Uses AI. The Question is Whether it's Decorative or Transformative.
+                </h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">
+                    The schools that get this right won't just adopt AI — they'll rethink everything. What children need to learn. How they learn it. How we assess them. And how we raise them to lead a future where automation has replaced most of what we once called skills. That mindset shift is where we begin.
+                </p>
+            </div>
+            <div class="space-y-24">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                    <div class="flex-1 space-y-4">
+                        <span class="text-xs font-semibold tracking-widest uppercase text-primary">AI FOR STUDENTS</span>
+                        <h3 class="text-3xl md:text-4xl font-bold">Cypher</h3>
+                        <p class="text-slate-500 text-lg">Makes sure students ask honest, brave, and thoughtful questions.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Understands how students learn</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Guides thinking, not answers</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Personalized learning support</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Builds independent thinkers, not AI-dependent learners</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 border border-slate-200 rounded-full font-medium hover:bg-slate-50">Know more</button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
+                    <div class="flex-1 space-y-4">
+                        <span class="text-xs font-semibold tracking-widest uppercase text-primary">AI FOR TEACHERS</span>
+                        <h3 class="text-3xl md:text-4xl font-bold">Morpheus</h3>
+                        <p class="text-slate-500 text-lg">Your school's AI-powered Teaching Agent — reducing educator workload while deepening learning.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Lesson Plan & Content Creation</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI Powered Assessments</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI Powered Assessments</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Real-time visibility into student progress and learning gaps</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 border border-slate-200 rounded-full font-medium hover:bg-slate-50">Know more</button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-violet-500 to-purple-400 flex items-center justify-center shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                    <div class="flex-1 space-y-4">
+                        <span class="text-xs font-semibold tracking-widest uppercase text-primary">AI TOOL SUITE</span>
+                        <h3 class="text-3xl md:text-4xl font-bold">Zion</h3>
+                        <p class="text-slate-500 text-lg">30+ AI Tools for your school. Learning, CreativeResearch and Project tools at one place.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>30+ All-in-one AI toolkit</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Supports everyday schoolwork</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Safe and Structured AI use</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Fully integrated tools</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 border border-slate-200 rounded-full font-medium hover:bg-slate-50">Know more</button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
+                    <div class="flex-1 space-y-4">
+                        <span class="text-xs font-semibold tracking-widest uppercase text-primary">AI Center of Excellence</span>
+                        <h3 class="text-3xl md:text-4xl font-bold">Neo</h3>
+                        <p class="text-slate-500 text-lg">NEO turns your school into a hands-on AI innovation centre — where students don't just learn about AI, they build with it.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Hands-on AI learning lab</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Project-based learning</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI, robotics, XR, and emerging tools</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Develops skills beyond textbooks</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 border border-slate-200 rounded-full font-medium hover:bg-slate-50">Know more</button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-violet-500 to-purple-400 flex items-center justify-center shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                    <div class="flex-1 space-y-4">
+                        <span class="text-xs font-semibold tracking-widest uppercase text-primary">AI Infrastructure</span>
+                        <h3 class="text-3xl md:text-4xl font-bold">matrix</h3>
+                        <p class="text-slate-500 text-lg">Matrix provides Local AI infrastructure for schools with all required hardware and software.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Local AI Servers</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Local AI Models</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI-Powered Campus Intelligence</li>
+                            <li class="flex items-center gap-2 text-sm font-medium"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Classroom Monitoring</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 border border-slate-200 rounded-full font-medium hover:bg-slate-50">Know more</button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 section-alt">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-12">
+                Over 10,000+</span> students and teachers trust us!
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-gradient">10+</div>
+                    <div class="text-slate-500 font-medium">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-gradient">98%</div>
+                    <div class="text-slate-500 font-medium">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="rounded-3xl bg-gradient-to-br from-primary to-pink-400 p-12 md:p-20 text-center text-white">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Start Your Journey!</h2>
+                <p class="text-lg opacity-90 mb-8 max-w-xl mx-auto">
+                    Let's work together in making your school a truly AI Ready School.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-primary px-8 py-3 rounded-full font-bold flex items-center justify-center gap-2">
+                        Book a FREE Demo 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    <button class="border border-white/30 text-white px-8 py-3 rounded-full font-bold hover:bg-white/10">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t py-12 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <div class="font-bold text-lg mb-2"><span class="text-gradient">AI Ready</span>School</div>
+                    <p class="text-sm text-slate-500">A complete AI ecosystem for K-12 schools.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-sm">AI Products</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">Cypher</a></li>
+                        <li><a href="#" class="hover:text-primary">Morpheus</a></li>
+                        <li><a href="#" class="hover:text-primary">Zion</a></li>
+                        <li><a href="#" class="hover:text-primary">Neo</a></li>
+                        <li><a href="#" class="hover:text-primary">Matrix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> 
+</body>
+</html>

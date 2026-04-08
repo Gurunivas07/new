@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases | AI Ready School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#F43F5E' }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .text-gradient {
+            background: linear-gradient(135deg, #F43F5E 0%, #D946EF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-use-cases {
+             background: linear-gradient(180deg, #fdf2f4 0%, #ffffff 100%);
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-use-cases font-sans antialiased text-slate-900 min-h-screen">
+    <nav class="bg-white/60 backdrop-blur-sm sticky top-0 z-50 border-b border-rose-100">
+        <div class="container mx-auto flex items-center justify-between h-16 px-6">
+            <a href="web.html" class="flex items-center gap-2 font-bold text-xl">
+                <span class="text-gradient">AIReady</span> <span>School</span>
+            </a>
+            <a href="web.html" class="text-sm font-semibold text-rose-500 hover:text-rose-600">Back to Home</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-6 py-12 max-w-5xl">
+        <div class="mb-12 rounded-3xl overflow-hidden border border-rose-200 bg-white/50 shadow-sm">
+            <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69c3fdc60c78cdc5edae08bc_ai-ready-school-use-cases-2.jpg" 
+                 alt="School Ecosystem" class="w-full h-64 object-cover opacity-80 mix-blend-multiply">
+        </div>
+        <div class="max-w-3xl mb-16">
+            <h1 class="text-5xl font-extrabold mb-8 tracking-tight">Use Cases</h1>
+            <p class="text-lg text-slate-700 leading-relaxed font-medium">
+               Every school has teachers working hard, students showing up, and parents hoping for the best. But hope is not a system. AI Ready School was built to give every stakeholder in the school ecosystem something more reliable than hope — clarity. Clarity about where each student truly is, what each teacher actually needs, and what school leadership can do about it. The use cases below are not feature lists. They are windows into real situations that play out in schools every day, and how AI Ready School changes the outcome.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12" x-data="{ tab: 'student' }">
+            <div class="flex flex-col gap-4">
+                <button @click="tab = 'student'" 
+                    :class="tab === 'student' ? 'text-slate-900 border-l-4 border-primary pl-4' : 'text-slate-400 pl-4 hover:text-rose-400'"
+                    class="text-2xl font-bold transition-all text-left uppercase tracking-tighter">
+                    student
+                </button>
+                <button @click="tab = 'teachers'" 
+                    :class="tab === 'teachers' ? 'text-slate-900 border-l-4 border-primary pl-4' : 'text-slate-400 pl-4 hover:text-rose-400'"
+                    class="text-2xl font-bold transition-all text-left uppercase tracking-tighter">
+                    teachers
+                </button>
+                <button @click="tab = 'parents'" 
+                    :class="tab === 'parents' ? 'text-slate-900 border-l-4 border-primary pl-4' : 'text-slate-400 pl-4 hover:text-rose-400'"
+                    class="text-2xl font-bold transition-all text-left uppercase tracking-tighter">
+                    parents
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="border-t py-12 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <div class="font-bold text-lg mb-2"><span class="text-gradient">AI Ready</span>School</div>
+                    <p class="text-sm text-slate-500">A complete AI ecosystem for K-12 schools.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-sm">AI Products</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">Cypher</a></li>
+                        <li><a href="#" class="hover:text-primary">Morpheus</a></li>
+                        <li><a href="#" class="hover:text-primary">Zion</a></li>
+                        <li><a href="#" class="hover:text-primary">Neo</a></li>
+                        <li><a href="#" class="hover:text-primary">Matrix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-sm">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> 
+</body>
+</html>
